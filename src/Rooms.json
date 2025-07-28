@@ -1,0 +1,53 @@
+[
+  {
+    "id": "1",
+    "type": "Standard",
+    "title": "Orange View",
+    "image": "/images/rooms-1.jpg",
+    "description": "Nice and accomodationg, good for relaxation",
+    "adults": 2,
+    "size": "ft",
+    "price": "39,999",
+    "photos": [
+      "/images/rooms-1.jpg",
+      "/images/rooms-1-photo-1.jpg",
+      "/images/rooms-1-photo-2.jpg",
+      "/images/rooms-1-photo-3.jpg",
+      "/images/rooms-1-photo-4.jpg"
+    ]
+  },
+  {
+    "id": "2",
+    "type": "Standard",
+    "title": "Orange View",
+    "image": "/images/rooms-1.jpg",
+    "description": "Nice and accomodationg, good for relaxation",
+    "adults": 2,
+    "size": "ft",
+    "price": "39,999",
+    "photos": [
+      "/images/rooms-2.jpg",
+      "/images/rooms-2-photo-1.jpg",
+      "/images/rooms-2-photo-2.jpg",
+      "/images/rooms-2-photo-3.jpg",
+      "/images/rooms-2-photo-4.jpg"
+    ]
+  },
+  {
+    "id": "3",
+    "type": "Standard",
+    "title": "Orange View",
+    "image": "/images/rooms-1.jpg",
+    "description": "Nice and accomodationg, good for relaxation",
+    "adults": 2,
+    "size": "ft",
+    "price": "39,999",
+    "photos": [
+      "/images/rooms-3.jpg",
+      "/images/rooms-3-photo-1.jpg",
+      "/images/rooms-3-photo-2.jpg",
+      "/images/rooms-3-photo-3.jpg",
+      "/images/rooms-3-photo-4.jpg"
+    ]
+  }
+]

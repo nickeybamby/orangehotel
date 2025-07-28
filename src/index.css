@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Outfit:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: var(--Outfit-font);
+}
+
+:root {
+  --primary-color: #ffa600;
+  --primary-light: #f8f0e3;
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #204f5e;
+  --secondary-color: #23bcec;
+  --text-light: #5a8695;
+  --Bricolage-font: "Bricolage Grotesque", sans-serif;
+  --Outfit-font: "Outfit", sans-serif;
+
+  --transition-regular: 0.3s;
+  --transition-slow: 0.6s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--Bricolage-font);
+  color: var(--text-color);
+}
+
+p {
+    color: var(--text-light);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.logo {
+    @apply font-bricolage;
+    color: var(--primary-color)
+}
+
+.logo span{
+    @apply font-bricolage;
+    color: var(--secondary-color);
+}
+
+.navbar {
+    box-shadow: 0 4px 20px rgba(32, 79, 94, .5);
+}
+
+.menu {
+    transition: var(--transition-regular) !important;
+}
+
+.menu li a {
+    position: relative;
+    z-index: 1;
+    padding: 2px 10px;
+    display: inline-block;
+    color: var(--text-color);
+    transition: var(--transition-regular);
+}
+
+.menu li a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background-color: var(--primary-light);
+    transition: var(--transition-regular);
+    z-index: -1;
+    opacity: 0;
+    transition-delay: .2s;
+}
+
+.menu li:hover a::after {
+    opacity: 1;
+}
+
+.nav-form input {
+    border: 4px solid var(--primary-light);
+    background-color: var(--primary-light);
+    position: relative;
+}
+
+.nav-form i {
+    position: relative;
+    top: 45px;
+    font-size: 1.1rem;
+    right: 20px;
+    color: var(--primary-color);
+}
+
+.nav-form .react-datepicker-wrapper {
+    width: 100% !important; 
+}
+
+@media screen and (max-width:1400) {
+    .navbar {
+        padding: 20px 2%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .navbar {
+        padding: 20px 4%;
+    }
+
+    .menu {
+        line-height: 3.25rem;
+    }
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    background-image: url(assets/Hero-image.webp);
+    background-position: left center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    z-index: 9;
+}
+
+.contact-form {
+    width: fit-content;
+    border-radius: 10px 90px 90px 10px;
+    box-shadow: 0 4px 20px rgba(32, 79, 94, .05);
+}
+
+.contact-form i {
+    /* top: 45px; */
+    /* right: 20px; */
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.contact-form input {
+    border:  4px solid var(--primary-light);
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+@media screen and (max-width:900px) {
+    .contact-form {
+        width: 100%;
+        border-radius: 10px;
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .contact-form .react-datepicker-wrapper{
+        width: 100%;
+    }
+    .contact-form input {
+        width: 100% !important;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+}
+
+/* Service */
+.service-item {
+    height: 450px;
+    border: 10px solid var(--white-color);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(32, 79, 94, .05);
+    transition: var(--transition-slow);
+}
+
+.service-item img {
+    width: 100%;
+    height: 100%;
+    transition: var(--transition-slow);
+}
+
+.service-item:hover img {
+    transform: scale(1.1);
+}
+
+.service-item img {
+    transition: var(--transition-slow);
+}
+
+.service-wrapper .service-item:nth-of-type(even) {
+    transform: translateY(50px);
+}
+
+@media screen and (max-width:768px)  {
+    .service-wrapper .service-item:nth-of-type(even) {
+        transform: translateY(0px);
+    }
+}
