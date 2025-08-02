@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { FaCheck, FaArrowRight } from "react-icons/fa";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -51,6 +52,37 @@ function Index() {
     activeTab === "All"
       ? RoomsData
       : RoomsData.filter((room) => room.type === activeTab);
+
+  const swiperRef = useRef(null);
+
+  const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
+
+  const testimonials = [
+    {
+      name: "Sarah Ojo",
+      company: "Obaga Orange",
+      message:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur saepe repellat esse nostrum repudiandae eaque consequatur, impedit eveniet porro reiciendis? Error labore vitae consequuntur dolorum est qui id, quos sunt molestiae deleniti nesciunt, placeat omnis accusamus facere, magni quibusdam odio.",
+    },
+    {
+      name: "Kunle Usmaan",
+      company: "Xcel Groups",
+      message:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur saepe repellat esse nostrum repudiandae eaque consequatur, impedit eveniet porro reiciendis? Error labore vitae consequuntur dolorum est qui id, quos sunt molestiae deleniti nesciunt, placeat omnis accusamus facere, magni quibusdam odio.",
+    },
+    {
+      name: "Adio Ronke",
+      company: "ThemeForest",
+      message:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur saepe repellat esse nostrum repudiandae eaque consequatur, impedit eveniet porro reiciendis? Error labore vitae consequuntur dolorum est qui id, quos sunt molestiae deleniti nesciunt, placeat omnis accusamus facere, magni quibusdam odio.",
+    },
+    {
+      name: "Okon Miracle",
+      company: "CodeCrayon",
+      message:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur saepe repellat esse nostrum repudiandae eaque consequatur, impedit eveniet porro reiciendis? Error labore vitae consequuntur dolorum est qui id, quos sunt molestiae deleniti nesciunt, placeat omnis accusamus facere, magni quibusdam odio.",
+    },
+  ];
 
   return (
     <>
@@ -204,7 +236,7 @@ function Index() {
         </div>
       </div>
 
-      <div className="features bg-[#fffaf0] w-full lg:px-[6%] px-[8%] py-[150px] flex flex-col items-center justify-center gap-20 z-[999] relative overflow-hidden ">
+      <div className="features bg-[#fffaf0] w-full lg:px-[6%] px-[8%] py-[150px] flex flex-col items-center justify-center gap-20 z-[799] relative overflow-hidden ">
         <div className="section-title text-center w-full space-y-4">
           <span className="bg-[#d5f1f1] rounded-full px-5 py-2 font-bricolage tracking-wider text-sm uppercase  ">
             Features
@@ -340,10 +372,10 @@ function Index() {
 
       <div className="about about-1 bg-[#fffaf0] lg:px-[6%] px-[8%] py-[50px] flex items-center flex-col lg:flex-row justify-between gap-20 relative overflow-hidden ">
         <div className="section-title text-start space-y-4 relative z-[9] lg:w-1/2 w-full ">
-          <span className="bg-[#fffaf0] rounded-full px-2 font-bricolage tracking-wider text-sm uppercase ">
+          <span className="bg-[#d5f1f1] rounded-full px-5 py-2 font-bricolage tracking-wider text-sm uppercase ">
             About Us
           </span>
-          <h1 className="text-2xl sm:text-5xl font-semibold w-full xl:w-[50%] mx-auto leading-tight">
+          <h1 className="pb-5 text-2xl sm:text-5xl font-semibold w-full leading-tight">
             {" "}
             Why more visitors choose us
           </h1>
@@ -352,32 +384,247 @@ function Index() {
             <li className="flex flex-col sm:flex-row align-items-start gap-5">
               <span className="text-2xl font-bold text-[#ecb934]">01.</span>
               <div>
-                <h4 className="md:text-2xl text-xl font-semibold mb-2">Peaceful Ambience</h4>
-                <p className="text-base md:text-lg">A calm, quiet retreat away from the city's noise</p>
+                <h4 className="md:text-2xl text-xl font-semibold mb-2">
+                  Peaceful Ambience
+                </h4>
+                <p className="text-base md:text-lg">
+                  A calm, quiet retreat away from the city's noise
+                </p>
               </div>
             </li>
             <li className="flex flex-col sm:flex-row align-items-start gap-5">
               <span className="text-2xl font-bold text-[#ecb934]">02.</span>
               <div>
-                <h4 className="md:text-2xl text-xl font-semibold mb-2">Modern Interiors</h4>
-                <p className="text-base md:text-lg">Vibrant, stylish spaces designed for comfort and class</p>
+                <h4 className="md:text-2xl text-xl font-semibold mb-2">
+                  Modern Interiors
+                </h4>
+                <p className="text-base md:text-lg">
+                  Vibrant, stylish spaces designed for comfort and class
+                </p>
               </div>
             </li>
             <li className="flex flex-col sm:flex-row align-items-start gap-5">
               <span className="text-2xl font-bold text-[#ecb934]">03.</span>
               <div>
-                <h4 className="md:text-2xl text-xl font-semibold mb-2">Unmatched Hospitality</h4>
-                <p className="text-base md:text-lg">Warm, attentive staff that makes every stay feel personal</p>
+                <h4 className="md:text-2xl text-xl font-semibold mb-2">
+                  Unmatched Hospitality
+                </h4>
+                <p className="text-base md:text-lg">
+                  Warm, attentive staff that makes every stay feel personal
+                </p>
               </div>
             </li>
             <li className="flex flex-col sm:flex-row align-items-start gap-5">
               <span className="text-2xl font-bold text-[#ecb934]">04.</span>
               <div>
-                <h4 className="md:text-2xl text-xl font-semibold mb-2">Value for Money</h4>
-                <p className="text-base md:text-lg">Premium comfort without the premium price tag</p>
+                <h4 className="md:text-2xl text-xl font-semibold mb-2">
+                  Value for Money
+                </h4>
+                <p className="text-base md:text-lg">
+                  Premium comfort without the premium price tag
+                </p>
               </div>
             </li>
           </ul>
+        </div>
+
+        <div className="lg:w-1/2 w-full">
+          <div className="about-images w-full h-full relative z-[9] ">
+            <img
+              src={service1}
+              alt="service-image"
+              className="about-image about-image1"
+            />
+            <img
+              src={service2}
+              alt="service-image"
+              className="about-image about-image2"
+            />
+            <img
+              src={service3}
+              alt="service-image"
+              className="about-image about-image3"
+            />
+            <img
+              src={service4}
+              alt="service-image"
+              className="about-image about-image4"
+            />
+
+            <img
+              src={element1}
+              alt="element-image"
+              className="element-image element-image1"
+            />
+            <img
+              src={element2}
+              alt="element-image"
+              className="element-image element-image2"
+            />
+            <img
+              src={element3}
+              alt="element-image"
+              className="element-image element-image3"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="about-2 bg-[#fffaf0] lg:px-[6%] px-[8%] py-[50px] relative  overflow-hidden pb-0">
+        <div className="about flex flex-col-reverse lg:flex-row items-center justify-between gap-20 relative z-10">
+          {/* Right Hero Image */}
+          <div className="w-full lg:w-1/2 relative z-[9]">
+            <img
+              src={heroImg}
+              alt="about"
+              className="w-full h-full object-contain relative z-10"
+            />
+          </div>
+
+          <div className="w-full lg:w-1/2 text-start lg:text-left">
+            <div className="inline-block bg-[#e6f2f2] text-xs font-medium text-gray-600 px-4 py-1 rounded-full mb-4 tracking-wide">
+              About Us
+            </div>
+            <h1 className="py-5 text-3xl md:text:4xl font-semibold text-[#1d2b3a] mb-4">
+              Our philosophy and goals
+            </h1>
+            <p className="text-gray-500 mb-4">
+              Comfort should feel so effortless, and gospitality should feel
+              like home. We strive to create a space where guests can relax,
+              recharge and reconnect, whether they're here for business or
+              pleasure
+            </p>
+            <p className="text-gray-500 mb-8">
+              <ul className="flex flex-col gap-3">
+                <li className="flex flex-col sm:flex-row align-items-start gap-5">
+                  <span className="text-xl text-[#ecb934]">
+                    <FaCheck className="font-bold " />
+                  </span>
+                  <div>
+                    <p className="text-base text-gray-500 ">
+                      To offer a peaceful escape with vibrant yet calming
+                      interiors.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex flex-col sm:flex-row align-items-start gap-5">
+                  <span className="text-xl text-[#ecb934]">
+                    <FaCheck className="font-bold " />
+                  </span>
+                  <div>
+                    <p className="text-base text-gray-500 ">
+                      To deliver exceptional services through care,
+                      attentiveness, and warm human connection.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex flex-col sm:flex-row align-items-start gap-5">
+                  <span className="text-xl text-[#ecb934]">
+                    <FaCheck className="font-bold " />
+                  </span>
+                  <div>
+                    <p className="text-base text-gray-500 ">
+                      To create memorable dining experiences through quality
+                      food, drink, and ambience.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex flex-col sm:flex-row align-items-start gap-5">
+                  <span className="text-xl text-[#ecb934]">
+                    <FaCheck className="font-bold " />
+                  </span>
+                  <div>
+                    <p className="text-base text-gray-500 ">
+                      To build long lasting relationships with guests who return
+                      not just for our rooms, but for the way we make them feel.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </p>
+            <div className="flex w-full flex-col sm:flex-row items-center gap-4">
+              <button className="bg-[#23bcec] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-[#53bfe0] transition duration-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M3 5h2l3 9l3-6l4 10h4 2" />
+                </svg>
+                Get In Touch
+              </button>
+
+              <button className="text-[#1d2b3a] px-4 py-2 font-semibold flex items-center gap-2 hover:underline transition">
+                Book Now
+                <FaArrowRight />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-[#f9fefe] w-full">
+        <div className="w-full lg:w-[95%] mx-auto py-12 bg-[#eafbfb] rounded-[20px] box-shadow-large relative z-10">
+          <div className="text-center mb-12">
+            <span className="bg-[#d5f1f1] rounded-full px-5 py-2 font-bricolage tracking-wider text-sm uppercase">
+              Reviews
+            </span>
+            <h1 className="text-2xl sm:text-5xl font-semibold w-full xl:w-[50%] mx-auto leading-tight">
+              Customer Voices : <br /> Hear What They Say!
+            </h1>
+
+            <div className="flex items-center justify-center space-x-4 mb-6">
+              {avatars.map((avatar, index) => (
+                <img
+                  key={index}
+                  src={avatar}
+                  alt={`avatar${index}`}
+                  className={`cursor-pointer mt-12 rounded-full object-cover transition-all duration-300 ${
+                    activeIndex === index ? "w-16 h-16" : "w-12 h-12"
+                  }`}
+                  onClick={() => {
+                    setActiveIndex(index);
+                    swiperRef.current?.slideToLoop(index);
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto relative">
+            <Swiper
+              modules={[Navigation]}
+              slidesPerView={1}
+              loop={true}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+              navigation={{
+                nextEl: ".custom-next",
+                prevEl: ".custom-prev",
+              }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <SwiperSlide key={index}>
+                  <div className="flex flex-col items-center text-center px-6">
+                    <div className="text-[#ecb934] text-4xl mb-4">"</div>
+                    <p className="text-gray-600 text-base italic max-w-2xl">
+                      {testimonial.message}
+                    </p>
+                    <div className="mt-4">
+                      <h4>
+                        <span className="text-sm uppercase tracking-wide text-gray-400">
+                          {testimonial.company}
+                        </span>
+                      </h4>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
     </>
