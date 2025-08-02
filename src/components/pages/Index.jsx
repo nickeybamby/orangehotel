@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaCheck, FaArrowRight } from "react-icons/fa";
+import { FaQuoteLeft } from "react-icons/fa6";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -43,6 +44,9 @@ function Index() {
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const swiperRef = useRef(null);
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
 
   const [activeTab, setActiveTab] = useState("All");
 
@@ -53,9 +57,7 @@ function Index() {
       ? RoomsData
       : RoomsData.filter((room) => room.type === activeTab);
 
-  const swiperRef = useRef(null);
-
-  const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
+  const avatars = [avatar1, avatar2, avatar3, avatar4];
 
   const testimonials = [
     {
@@ -470,7 +472,7 @@ function Index() {
         </div>
       </div>
 
-      <div className="about-2 bg-[#fffaf0] lg:px-[6%] px-[8%] py-[50px] relative  overflow-hidden pb-0">
+      <div className="about-2 bg-[#fffaf0] lg:px-[6%] px-[8%] py-[150px] relative  overflow-hidden pb-0">
         <div className="about flex flex-col-reverse lg:flex-row items-center justify-between gap-20 relative z-10">
           {/* Right Hero Image */}
           <div className="w-full lg:w-1/2 relative z-[9]">
@@ -566,17 +568,18 @@ function Index() {
         </div>
       </div>
 
+          {/* Testimonials */}
       <div className="bg-[#f9fefe] w-full">
         <div className="w-full lg:w-[95%] mx-auto py-12 bg-[#eafbfb] rounded-[20px] box-shadow-large relative z-10">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 mt-12">
             <span className="bg-[#d5f1f1] rounded-full px-5 py-2 font-bricolage tracking-wider text-sm uppercase">
               Reviews
             </span>
-            <h1 className="text-2xl sm:text-5xl font-semibold w-full xl:w-[50%] mx-auto leading-tight">
+            <h1 className="text-2xl py-5 sm:text-5xl font-semibold w-full xl:w-[50%] mx-auto leading-tight">
               Customer Voices : <br /> Hear What They Say!
             </h1>
 
-            <div className="flex items-center justify-center space-x-4 mb-6">
+            <div className="flex h-[100px] items-center justify-center space-x-4 mb-6">
               {avatars.map((avatar, index) => (
                 <img
                   key={index}
@@ -608,8 +611,8 @@ function Index() {
             >
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex flex-col items-center text-center px-6">
-                    <div className="text-[#ecb934] text-4xl mb-4">"</div>
+                  <div className="flex flex-col items-center text-center justify-center px-6 h-[350px] ">
+                    <div className="text-[#ecb934] text-2xl mb-4"><FaQuoteLeft /></div>
                     <p className="text-gray-600 text-base italic max-w-2xl">
                       {testimonial.message}
                     </p>
@@ -624,9 +627,20 @@ function Index() {
                 </SwiperSlide>
               ))}
             </Swiper>
+
+            {/* Custom Navigation Buttons */}
+            <button ref={prevRef} className="custom-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 transition">
+              <i className="ri-arrow-left-s-line text-2xl"></i>
+            </button>
+
+            <button ref={nextRef} className="custom-next absolute right-0 top-1/2 -translate-y-1/2 z-10 transition">
+              <i className="ri-arrow-right-s-line text-2xl"></i>
+            </button>
           </div>
         </div>
       </div>
+
+      <div className=" bg-[#fffaf0] lg:px-[6%] px-[8%] py-[150px]"></div>
     </>
   );
 }
