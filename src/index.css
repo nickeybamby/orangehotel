@@ -355,8 +355,8 @@ html {
     left: -33px;
 }
 
-.ri-arrow-right-s-line,
-.ri-arrow-left-s-line {
+.testimonials.ri-arrow-right-s-line,
+.testimonials.ri-arrow-left-s-line {
     color: var(--white-color);
     height: 30px;
     width: 30px;

@@ -568,7 +568,7 @@ function Index() {
         </div>
       </div>
 
-          {/* Testimonials */}
+      {/* Testimonials */}
       <div className="bg-[#f9fefe] w-full">
         <div className="w-full lg:w-[95%] mx-auto py-12 bg-[#eafbfb] rounded-[20px] box-shadow-large relative z-10">
           <div className="text-center mb-12 mt-12">
@@ -612,7 +612,9 @@ function Index() {
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index}>
                   <div className="flex flex-col items-center text-center justify-center px-6 h-[350px] ">
-                    <div className="text-[#ecb934] text-2xl mb-4"><FaQuoteLeft /></div>
+                    <div className="text-[#ecb934] text-2xl mb-4">
+                      <FaQuoteLeft />
+                    </div>
                     <p className="text-gray-600 text-base italic max-w-2xl">
                       {testimonial.message}
                     </p>
@@ -629,18 +631,128 @@ function Index() {
             </Swiper>
 
             {/* Custom Navigation Buttons */}
-            <button ref={prevRef} className="custom-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 transition">
-              <i className="ri-arrow-left-s-line text-2xl"></i>
+            <button
+              ref={prevRef}
+              className="custom-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 transition"
+            >
+              <i className="testimonials ri-arrow-left-s-line text-2xl"></i>
             </button>
 
-            <button ref={nextRef} className="custom-next absolute right-0 top-1/2 -translate-y-1/2 z-10 transition">
-              <i className="ri-arrow-right-s-line text-2xl"></i>
+            <button
+              ref={nextRef}
+              className="custom-next absolute right-0 top-1/2 -translate-y-1/2 z-10 transition"
+            >
+              <i className="testimonials ri-arrow-right-s-line text-2xl"></i>
             </button>
           </div>
         </div>
       </div>
 
-      <div className=" bg-[#fffaf0] lg:px-[6%] px-[8%] py-[150px]"></div>
+      <div className=" bg-[#fffaf0] lg:px-[6%] px-[8%] py-[150px] flex flex-col items-center justify-center gap-10 z-[9] relative overflow-hidden pt-[20px] ">
+        <span className="bg-[#d5f1f1] rounded-full px-5 py-2 font-bricolage tracking-wider text-sm uppercase">
+          Our Blogs
+        </span>
+        <h1 className="text-2xl py-5 sm:text-5xl font-semibold w-full xl:w-[50%] mx-auto leading-tight">
+          Latest blog publications
+        </h1>
+
+        {/* Blog Wrapper */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full text-left ">
+          <div className="bg-white rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group p-4 ">
+            <div className="overflow-hidden rounded-t-[16px] ">
+              <img
+                src={blog1}
+                alt="blog-image"
+                className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-105 "
+              />
+
+              <div className="p-4 bg-[#f2fbfb] rounded-b-[16px]  ">
+                <div className="flex items-center text-sm text-gray-500 gap-2 mb-4">
+                    <img src={blog1} alt="blog-image"
+                    className="w-6 h-6 rounded-full object-cover" />
+
+                    <span>Getaway in Egypt</span>
+
+                    <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+
+                    <span>02 Aug 2025</span>
+                </div>
+                <h3 className="font-semibold text-xl text-[#1d2b3a] mb2 leading-snug ">
+                    Why your next amazing getaway should be in Egypt
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">Uncover timeless wonders — your next unforgettable getaway awaits in majestic Egypt!</p>
+                <a href="#" className="text-sm font-semibold text-[#1d2b3a] inline-flex items-center group ">Read More
+                    <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line mt-1 ">
+
+                    </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group p-4 ">
+            <div className="overflow-hidden rounded-t-[16px] ">
+              <img
+                src={blog2}
+                alt="blog-image"
+                className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-105 "
+              />
+
+              <div className="p-4 bg-[#f2fbfb] rounded-b-[16px]  ">
+                <div className="flex items-center text-sm text-gray-500 gap-2 mb-4">
+                    <img src={blog2} alt="blog-image"
+                    className="w-6 h-6 rounded-full object-cover" />
+
+                    <span>Best travel packages</span>
+
+                    <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+
+                    <span>02 Aug 2025</span>
+                </div>
+                <h3 className="font-semibold text-xl text-[#1d2b3a] mb2 leading-snug ">
+                    Why you should book your trips with Obaga Orange
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">Uncover timeless wonders — your next unforgettable getaway awaits in majestic Egypt!</p>
+                <a href="#" className="text-sm font-semibold text-[#1d2b3a] inline-flex items-center group ">Read More
+                    <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line mt-1 ">
+
+                    </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group p-4 ">
+            <div className="overflow-hidden rounded-t-[16px] ">
+              <img
+                src={blog3}
+                alt="blog-image"
+                className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-105 "
+              />
+
+              <div className="p-4 bg-[#f2fbfb] rounded-b-[16px]  ">
+                <div className="flex items-center text-sm text-gray-500 gap-2 mb-4">
+                    <img src={blog3} alt="blog-image"
+                    className="w-6 h-6 rounded-full object-cover" />
+
+                    <span>Explore unlimited</span>
+
+                    <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+
+                    <span>02 Aug 2025</span>
+                </div>
+                <h3 className="font-semibold text-xl text-[#1d2b3a] mb2 leading-snug ">
+                    Why your next amazing getaway should be in Egypt
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">Uncover timeless wonders — your next unforgettable getaway awaits in majestic Egypt!</p>
+                <a href="#" className="text-sm font-semibold text-[#1d2b3a] inline-flex items-center group ">Read More
+                    <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line mt-1 ">
+
+                    </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
