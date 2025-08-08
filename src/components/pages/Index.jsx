@@ -39,6 +39,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Footer from "../footer/Footer";
 
 function Index() {
   const [checkInDate, setCheckInDate] = useState(null);
@@ -677,7 +678,7 @@ function Index() {
 
                     <span>02 Aug 2025</span>
                 </div>
-                <h3 className="font-semibold text-xl text-[#1d2b3a] mb2 leading-snug ">
+                <h3 className="font-semibold xl:text-2xl text-xl text-[#1d2b3a] mb2 leading-snug ">
                     Why your next amazing getaway should be in Egypt
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">Uncover timeless wonders — your next unforgettable getaway awaits in majestic Egypt!</p>
@@ -708,7 +709,7 @@ function Index() {
 
                     <span>02 Aug 2025</span>
                 </div>
-                <h3 className="font-semibold text-xl text-[#1d2b3a] mb2 leading-snug ">
+                <h3 className="font-semibold xl:text-2xl text-xl text-[#1d2b3a] mb2 leading-snug ">
                     Why you should book your trips with Obaga Orange
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">Uncover timeless wonders — your next unforgettable getaway awaits in majestic Egypt!</p>
@@ -739,7 +740,7 @@ function Index() {
 
                     <span>02 Aug 2025</span>
                 </div>
-                <h3 className="font-semibold text-xl text-[#1d2b3a] mb2 leading-snug ">
+                <h3 className="font-semibold xl:text-2xl text-xl text-[#1d2b3a] mb2 leading-snug ">
                     Why your next amazing getaway should be in Egypt
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">Uncover timeless wonders — your next unforgettable getaway awaits in majestic Egypt!</p>

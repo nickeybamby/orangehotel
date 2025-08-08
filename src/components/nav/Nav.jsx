@@ -27,7 +27,7 @@ function Nav() {
         }`}
       >
         <Link to="/" className="text-4xl font-bold logo font-bricolage">
-          Orange <span>Hotel</span>
+          Orange <span>Inn</span>
         </Link>
 
         {/* Menu */}
