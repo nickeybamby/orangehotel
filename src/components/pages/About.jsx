@@ -164,15 +164,15 @@ function About() {
                 <button className="bg-[#ffa600] hover:bg-[#ecb934] text-white font-semibold px-6 py-3 rounded-full transition flex items-center gap-2">
                   <i className="ri-mail-line"></i>READ MORE
                 </button>
-                <a
-                  href=""
+                <Link
+                  to={"/room"}
                   className="font-semibold text-[#1d2b3a] inline-flex items-center group "
                 >
                   BOOK NOW
                   <span className="ml-1 group-hover:translate-x-1 transition-transform ">
                     →
                   </span>
-                </a>
+                </Link>
               </div>
             </h2>
           </div>

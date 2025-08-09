@@ -14,7 +14,7 @@ function Footer() {
             <div className="lg:w-7/12">
               <Link
                 to="/"
-                className="text-4xl font-bold font-bricolage text-black"
+                className="text-4xl font-bold font-bricolage text-[#ffa600]"
               >
                 Orange<span className="text-[#23bcec] font-bricolage">Inn</span>
               </Link>

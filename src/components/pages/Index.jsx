@@ -39,7 +39,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import Footer from "../footer/Footer";
 
 function Index() {
   const [checkInDate, setCheckInDate] = useState(null);
@@ -546,7 +545,8 @@ function Index() {
               </ul>
             </p>
             <div className="flex w-full flex-col sm:flex-row items-center gap-4">
-              <button className="bg-[#23bcec] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-[#53bfe0] transition duration-300">
+              <Link to={'/contact'}>
+                <button className="bg-[#23bcec] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-[#53bfe0] transition duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -559,11 +559,14 @@ function Index() {
                 </svg>
                 Get In Touch
               </button>
+              </Link>
 
-              <button className="text-[#1d2b3a] px-4 py-2 font-semibold flex items-center gap-2 hover:underline transition">
-                Book Now
-                <FaArrowRight />
-              </button>
+              <Link to={"/room"}>
+                <button className="text-[#1d2b3a] px-4 py-2 font-semibold flex items-center gap-2 hover:underline transition">
+                  Book Now
+                  <FaArrowRight />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -669,23 +672,31 @@ function Index() {
 
               <div className="p-4 bg-[#f2fbfb] rounded-b-[16px]  ">
                 <div className="flex items-center text-sm text-gray-500 gap-2 mb-4">
-                    <img src={blog1} alt="blog-image"
-                    className="w-6 h-6 rounded-full object-cover" />
+                  <img
+                    src={blog1}
+                    alt="blog-image"
+                    className="w-6 h-6 rounded-full object-cover"
+                  />
 
-                    <span>Getaway in Egypt</span>
+                  <span>Getaway in Egypt</span>
 
-                    <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                  <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
 
-                    <span>02 Aug 2025</span>
+                  <span>02 Aug 2025</span>
                 </div>
                 <h3 className="font-semibold xl:text-2xl text-xl text-[#1d2b3a] mb2 leading-snug ">
-                    Why your next amazing getaway should be in Egypt
+                  Why your next amazing getaway should be in Egypt
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">Uncover timeless wonders — your next unforgettable getaway awaits in majestic Egypt!</p>
-                <a href="#" className="text-sm font-semibold text-[#1d2b3a] inline-flex items-center group ">Read More
-                    <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line mt-1 ">
-
-                    </span>
+                <p className="text-gray-600 text-sm mb-4">
+                  Uncover timeless wonders — your next unforgettable getaway
+                  awaits in majestic Egypt!
+                </p>
+                <a
+                  href="#"
+                  className="text-sm font-semibold text-[#1d2b3a] inline-flex items-center group "
+                >
+                  Read More
+                  <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line mt-1 "></span>
                 </a>
               </div>
             </div>
@@ -700,23 +711,31 @@ function Index() {
 
               <div className="p-4 bg-[#f2fbfb] rounded-b-[16px]  ">
                 <div className="flex items-center text-sm text-gray-500 gap-2 mb-4">
-                    <img src={blog2} alt="blog-image"
-                    className="w-6 h-6 rounded-full object-cover" />
+                  <img
+                    src={blog2}
+                    alt="blog-image"
+                    className="w-6 h-6 rounded-full object-cover"
+                  />
 
-                    <span>Best travel packages</span>
+                  <span>Best travel packages</span>
 
-                    <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                  <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
 
-                    <span>02 Aug 2025</span>
+                  <span>02 Aug 2025</span>
                 </div>
                 <h3 className="font-semibold xl:text-2xl text-xl text-[#1d2b3a] mb2 leading-snug ">
-                    Why you should book your trips with Obaga Orange
+                  Why you should book your trips with Obaga Orange
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">Uncover timeless wonders — your next unforgettable getaway awaits in majestic Egypt!</p>
-                <a href="#" className="text-sm font-semibold text-[#1d2b3a] inline-flex items-center group ">Read More
-                    <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line mt-1 ">
-
-                    </span>
+                <p className="text-gray-600 text-sm mb-4">
+                  Uncover timeless wonders — your next unforgettable getaway
+                  awaits in majestic Egypt!
+                </p>
+                <a
+                  href="#"
+                  className="text-sm font-semibold text-[#1d2b3a] inline-flex items-center group "
+                >
+                  Read More
+                  <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line mt-1 "></span>
                 </a>
               </div>
             </div>
@@ -731,23 +750,31 @@ function Index() {
 
               <div className="p-4 bg-[#f2fbfb] rounded-b-[16px]  ">
                 <div className="flex items-center text-sm text-gray-500 gap-2 mb-4">
-                    <img src={blog3} alt="blog-image"
-                    className="w-6 h-6 rounded-full object-cover" />
+                  <img
+                    src={blog3}
+                    alt="blog-image"
+                    className="w-6 h-6 rounded-full object-cover"
+                  />
 
-                    <span>Explore unlimited</span>
+                  <span>Explore unlimited</span>
 
-                    <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                  <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
 
-                    <span>02 Aug 2025</span>
+                  <span>02 Aug 2025</span>
                 </div>
                 <h3 className="font-semibold xl:text-2xl text-xl text-[#1d2b3a] mb2 leading-snug ">
-                    Why your next amazing getaway should be in Egypt
+                  Why your next amazing getaway should be in Egypt
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">Uncover timeless wonders — your next unforgettable getaway awaits in majestic Egypt!</p>
-                <a href="#" className="text-sm font-semibold text-[#1d2b3a] inline-flex items-center group ">Read More
-                    <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line mt-1 ">
-
-                    </span>
+                <p className="text-gray-600 text-sm mb-4">
+                  Uncover timeless wonders — your next unforgettable getaway
+                  awaits in majestic Egypt!
+                </p>
+                <a
+                  href="#"
+                  className="text-sm font-semibold text-[#1d2b3a] inline-flex items-center group "
+                >
+                  Read More
+                  <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line mt-1 "></span>
                 </a>
               </div>
             </div>
