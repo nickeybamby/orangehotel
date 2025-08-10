@@ -134,24 +134,28 @@ function Rooms() {
                     </i>
                   </span> */}
                 </div>
-                <div className="px-6 pt-4 pb-4">
-                  <div className="py-4">
-                    <h3 className="text-2xl font-semibold mb-1">
-                      {rooms.title}
-                    </h3>
-                    <p className="text-md text-gray-500">{rooms.description}</p>
+                <Link to={`/room/${rooms.id}`}>
+                  <div className="px-6 pt-4 pb-4">
+                    <div className="py-4">
+                      <h3 className="text-2xl font-semibold mb-1">
+                        {rooms.title}
+                      </h3>
+                      <p className="text-md text-gray-500">
+                        {rooms.description}
+                      </p>
+                    </div>
+                    <div className="border-t mt-4 pt-4 flex justify-between items-center">
+                      <p className="text-lg font-bold text-[#000]">
+                        ${rooms.price}
+                      </p>
+                      <Link to={`/room/${rooms.id}`}>
+                        <button className="w-12 h-12 bg-[#ec9523] rounded-full flex items-center justify-center text-white text-xl">
+                          <i className="ri-bookmark-line"></i>
+                        </button>
+                      </Link>
+                    </div>
                   </div>
-                  <div className="border-t mt-4 pt-4 flex justify-between items-center">
-                    <p className="text-lg font-bold text-[#000]">
-                      ${rooms.price}
-                    </p>
-                    <Link to={`rooms/${rooms.id}`}>
-                      <button className="w-12 h-12 bg-[#ec9523] rounded-full flex items-center justify-center text-white text-xl">
-                        <i className="ri-bookmark-line"></i>
-                      </button>
-                    </Link>
-                  </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>

@@ -350,23 +350,27 @@ function Index() {
                         Size : {rooms.size}
                 </span> */}
               </div>
-              <div className="px-6 pt-4 pb-4">
-                <div className="py-4">
-                  <h3 className="text-2xl font-semibold mb-1">{rooms.title}</h3>
-                  <p className="text-md text-gray-500">{rooms.description}</p>
+              <Link to={`/room/${rooms.id}`}>
+                <div className="px-6 pt-4 pb-4">
+                  <div className="py-4">
+                    <h3 className="text-2xl font-semibold mb-1">
+                      {rooms.title}
+                    </h3>
+                    <p className="text-md text-gray-500">{rooms.description}</p>
+                  </div>
+                  <div className="border-t mt-4 pt-4 flex justify-between items-center">
+                    <p className="text-lg font-bold text-[#000]">
+                      ${rooms.price}
+                    </p>
+                    <Link to={`/room/${rooms.id}`}>
+                      {" "}
+                      <button className="w-12 h-12 bg-[#ec9523] rounded-full flex items-center justify-center text-white text-xl">
+                        <i className="ri-bookmark-line"></i>
+                      </button>
+                    </Link>
+                  </div>
                 </div>
-                <div className="border-t mt-4 pt-4 flex justify-between items-center">
-                  <p className="text-lg font-bold text-[#000]">
-                    ${rooms.price}
-                  </p>
-                  <Link to={`.rooms.${rooms.id}`}>
-                    {" "}
-                    <button className="w-12 h-12 bg-[#ec9523] rounded-full flex items-center justify-center text-white text-xl">
-                      <i className="ri-bookmark-line"></i>
-                    </button>
-                  </Link>
-                </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
@@ -545,20 +549,20 @@ function Index() {
               </ul>
             </p>
             <div className="flex w-full flex-col sm:flex-row items-center gap-4">
-              <Link to={'/contact'}>
+              <Link to={"/contact"}>
                 <button className="bg-[#23bcec] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-[#53bfe0] transition duration-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M3 5h2l3 9l3-6l4 10h4 2" />
-                </svg>
-                Get In Touch
-              </button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M3 5h2l3 9l3-6l4 10h4 2" />
+                  </svg>
+                  Get In Touch
+                </button>
               </Link>
 
               <Link to={"/room"}>
