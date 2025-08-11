@@ -5,11 +5,32 @@ import Element1 from "../../../assets/element-1.png";
 import Element2 from "../../../assets/element-2.png";
 import Element3 from "../../../assets/element-3.png";
 
-import RoomsData from "../../../Rooms.json";
+import { motion } from "framer-motion";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import { slides } from "./data";
+import {
+  Captions,
+  Download,
+  Fullscreen,
+  Zoom,
+  Thumbnails,
+} from "yet-another-react-lightbox/plugins";
+import "yet-another-react-lightbox/plugins/captions.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import Images from "./Images";
+// import Accordian from "../../components/accordian/Accordian";
 
 import Map from "../../map/Map";
 
 function Gallery() {
+  const [index, setIndex] = useState(-1);
+
+  const [visibleImages, setVisibleImages] = useState(12);
+  const loadMoreProducts = () => {
+    setVisibleImages((prevCount) => prevCount + 8);
+  };
+
   return (
     <>
       <div className="section-banner mt-5 pt-6 relative flex items-center justify-center flex-col text-center z-[55]">
@@ -49,6 +70,49 @@ function Gallery() {
           </div>
         </div>
       </div>
+
+      {/* Gallery */}
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <section className="section__container">
+          
+          <Images
+            data={slides.slice(0, visibleImages)}
+            onClick={(currentIndex) => setIndex(currentIndex)}
+          />
+
+          {/* load more images btn */}
+          <div className="product__btn">
+            {visibleImages < slides.length && (
+              <button className="btn" onClick={loadMoreProducts}>
+                Load More
+              </button>
+            )}
+          </div>
+
+          <Lightbox
+            plugins={[Captions, Download, Fullscreen, Zoom, Thumbnails]}
+            captions={{
+              showToggle: true,
+            }}
+            index={index}
+            open={index >= 0}
+            close={() => setIndex(-1)}
+            slides={slides}
+            styles={{
+              title: {
+                maxWidth: "100%", // Apply max-width to the slide title
+              },
+            }}
+          />
+        </section>
+
+        <Accordian />
+      </motion.div>
     </>
   );
 }

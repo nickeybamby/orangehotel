@@ -278,7 +278,7 @@ function RoomsDetails() {
               />
             </div>
 
-            <Link to={`/checkout/$room.id`}>
+            <Link to={`/checkout/${room.id}`}>
               <button
                 className="w-full py-3 bg-[#ffa600] hover:bg-[#ecb934] transition duration-300 text-white text-lg rounded-full flex items-center justify-center gap-2 mt-4
                      "

@@ -360,7 +360,7 @@ function Index() {
                   </div>
                   <div className="border-t mt-4 pt-4 flex justify-between items-center">
                     <p className="text-lg font-bold text-[#000]">
-                      ${rooms.price}
+                      ₦{rooms.price}
                     </p>
                     <Link to={`/room/${rooms.id}`}>
                       {" "}
