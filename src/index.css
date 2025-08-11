@@ -43,7 +43,8 @@ p {
     color: var(--text-light);
 }
 
-html {
+html, 
+body {
     overflow-x: hidden;
 }
 
@@ -476,5 +477,29 @@ html {
     100% {
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+
+/* Room details MQ section */
+
+@media (max-width:1399px) {}
+@media (max-width:1199px) {
+    .rooms-features {
+        grid-template-columns: repeat(2,1fr) !important;
+    }
+
+    .amenit-text {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:991px) {}
+@media (max-width:767px) {
+    .cta h1 {
+        font-size: 3rem;
+    }
+}
+@media (max-width:575px) {
+    .rooms-features {
+        grid-template-columns: repeat(1,1fr) !important;
     }
 }

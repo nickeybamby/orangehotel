@@ -8,6 +8,8 @@ import Footer from './components/footer/Footer';
 import Services from './components/pages/Services';
 import Rooms from './components/pages/Rooms';
 import RoomsDetails from './components/pages/RoomsDetails';
+import Checkout from './components/pages/Checkout';
+import Gallery from './components/pages/Gallery';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/room" element={<Rooms />} />
           <Route path="/room/:id" element={<RoomsDetails />} />
+          <Route path="/checkout/:id" element={<Checkout />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
         <Footer />
       </Router>
