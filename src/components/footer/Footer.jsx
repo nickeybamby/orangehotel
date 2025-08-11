@@ -166,7 +166,7 @@ function Footer() {
                 <div className="w-2/3">
                   <div className="flex flex-col gap-4">
                     <h5 className="font-semibold text-2xl">Contact</h5>
-                    <p>+234(0)801 234 5678</p>
+                    <p>+234 (0)91 3201 7988</p>
                     <p>Halleluyah Estate Osogbo, Osun State</p>
                   </div>
                 </div>

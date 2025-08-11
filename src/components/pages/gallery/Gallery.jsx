@@ -1,16 +1,15 @@
 import { Link, useParams } from "react-router-dom";
 
-import sectionElement from "../../assets/section-element.png";
-import Element1 from "../../assets/element-1.png";
-import Element2 from "../../assets/element-2.png";
-import Element3 from "../../assets/element-3.png";
+import sectionElement from "../../../assets/section-element.png";
+import Element1 from "../../../assets/element-1.png";
+import Element2 from "../../../assets/element-2.png";
+import Element3 from "../../../assets/element-3.png";
 
-import RoomsData from "../../Rooms.json";
+import RoomsData from "../../../Rooms.json";
 
-import Map from "../map/Map";
+import Map from "../../map/Map";
 
 function Gallery() {
-
   return (
     <>
       <div className="section-banner mt-5 pt-6 relative flex items-center justify-center flex-col text-center z-[55]">
@@ -41,8 +40,8 @@ function Gallery() {
         />
         <div className="section-banner-content flex items-center flex-col text-center z-[55]">
           <h1 className="text-7xl font-semibold">
-            Booking <br />
-            Confirmation
+            Vibrant <br />
+            Gallery
           </h1>
           <div className="mt-10 bg-[#d5f1f1] w-[350px] p-2 text-xl rounded">
             <Link to={"/"}>Home</Link> &nbsp; / &nbsp;

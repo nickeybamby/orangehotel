@@ -146,7 +146,7 @@ function Rooms() {
                     </div>
                     <div className="border-t mt-4 pt-4 flex justify-between items-center">
                       <p className="text-lg font-bold text-[#000]">
-                        ${rooms.price}
+                        ₦{rooms.price}
                       </p>
                       <Link to={`/room/${rooms.id}`}>
                         <button className="w-12 h-12 bg-[#ec9523] rounded-full flex items-center justify-center text-white text-xl">

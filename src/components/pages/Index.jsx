@@ -134,7 +134,7 @@ function Index() {
               {/* <i className="ri-calendar-line"></i> */}
             </div>
 
-            <div className="relative input-box">
+            {/* <div className="relative input-box">
               <label className="block text-sm font-[500] text-[#204f5e] tracking-widest uppercase mb-2">
                 {" "}
                 Adults
@@ -145,8 +145,8 @@ function Index() {
                 min="1"
                 className="w-auto xl:w-[350px] p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none"
               />
-              {/* <i className="ri-calendar-line"></i> */}
-            </div>
+               <i className="ri-calendar-line"></i> 
+            </div> */}
 
             <button
               type="submit"

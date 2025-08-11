@@ -1,30 +1,34 @@
 [
   {
     "id": "1",
-    "type": "Standard",
-    "title": "Orange View",
+    "type": "Luxury",
+    "title": "Diplomat",
     "image": "/images/rooms-1.jpg",
     "description": "Nice and accomodating, good for relaxation",
     "adults": 2,
     "size": "ft",
-    "price": "39,999",
+    "price": "59,999",
     "photos": [
       "/images/rooms-1.jpg",
       "/images/rooms-1-photo-1.jpg",
       "/images/rooms-1-photo-2.jpg",
       "/images/rooms-1-photo-3.jpg",
-      "/images/rooms-1-photo-4.jpg"
+      "/images/rooms-1-photo-5.jpg",
+      "/images/rooms-1-photo-6.jpg",
+      "/images/rooms-1-photo-7.jpg",
+      "/images/rooms-1-photo-8.jpg",
+      "/images/rooms-1-photo-9.jpg"
     ]
   },
   {
     "id": "2",
-    "type": "Standard",
-    "title": "Orange View",
-    "image": "/images/rooms-1.jpg",
+    "type": "Luxury",
+    "title": "Diplomat",
+    "image": "/images/rooms-2.jpg",
     "description": "Nice and accomodating, good for relaxation",
     "adults": 2,
     "size": "ft",
-    "price": "39,999",
+    "price": "59,999",
     "photos": [
       "/images/rooms-2.jpg",
       "/images/rooms-2-photo-1.jpg",
@@ -36,8 +40,8 @@
   {
     "id": "3",
     "type": "Standard",
-    "title": "Orange View",
-    "image": "/images/rooms-1.jpg",
+    "title": "Executive Delux",
+    "image": "/images/rooms-3.jpg",
     "description": "Nice and accomodating, good for relaxation",
     "adults": 2,
     "size": "ft",
@@ -47,7 +51,64 @@
       "/images/rooms-3-photo-1.jpg",
       "/images/rooms-3-photo-2.jpg",
       "/images/rooms-3-photo-3.jpg",
-      "/images/rooms-3-photo-4.jpg"
+      "/images/rooms-3-photo-4.jpg",
+      "/images/rooms-3-photo-5.jpg"
+    ]
+  },
+  {
+    "id": "4",
+    "type": "Luxury",
+    "title": "Diplomat",
+    "image": "/images/rooms-1.jpg",
+    "description": "Nice and accomodating, good for relaxation",
+    "adults": 2,
+    "size": "ft",
+    "price": "59,999",
+    "photos": [
+      "/images/rooms-1.jpg",
+      "/images/rooms-1-photo-1.jpg",
+      "/images/rooms-1-photo-2.jpg",
+      "/images/rooms-1-photo-3.jpg",
+      "/images/rooms-1-photo-5.jpg",
+      "/images/rooms-1-photo-6.jpg",
+      "/images/rooms-1-photo-7.jpg",
+      "/images/rooms-1-photo-8.jpg",
+      "/images/rooms-1-photo-9.jpg"
+    ]
+  },
+  {
+    "id": "5",
+    "type": "Luxury",
+    "title": "Diplomat",
+    "image": "/images/rooms-2.jpg",
+    "description": "Nice and accomodating, good for relaxation",
+    "adults": 2,
+    "size": "ft",
+    "price": "59,999",
+    "photos": [
+      "/images/rooms-2.jpg",
+      "/images/rooms-2-photo-1.jpg",
+      "/images/rooms-2-photo-2.jpg",
+      "/images/rooms-2-photo-3.jpg",
+      "/images/rooms-2-photo-4.jpg"
+    ]
+  },
+  {
+    "id": "6",
+    "type": "Standard",
+    "title": "Executive Delux",
+    "image": "/images/rooms-3.jpg",
+    "description": "Nice and accomodating, good for relaxation",
+    "adults": 2,
+    "size": "ft",
+    "price": "39,999",
+    "photos": [
+      "/images/rooms-3.jpg",
+      "/images/rooms-3-photo-1.jpg",
+      "/images/rooms-3-photo-2.jpg",
+      "/images/rooms-3-photo-3.jpg",
+      "/images/rooms-3-photo-4.jpg",
+      "/images/rooms-3-photo-5.jpg"
     ]
   }
 ]
