@@ -9,6 +9,7 @@ import Services from "./components/pages/Services";
 import Rooms from "./components/pages/Rooms";
 import RoomsDetails from "./components/pages/RoomsDetails";
 import Checkout from "./components/pages/Checkout";
+import Blogs from "./components/pages/Blogs";
 import Gallery from "./components/pages/gallery/Gallery";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/room" element={<Rooms />} />
           <Route path="/room/:id" element={<RoomsDetails />} />
           <Route path="/checkout/:id" element={<Checkout />} />
+          <Route path="/blog" element={<Blogs />} />
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
         <Footer />

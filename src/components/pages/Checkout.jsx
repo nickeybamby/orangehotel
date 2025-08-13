@@ -67,61 +67,66 @@ function Checkout() {
         <div className="py-[150px] px-[6%] w-full ">
           <div className="bg-[#f7fefe] rounded-3xl shadow-md p-10 grid grid-cols-1 lg:grid-cols-3 gap-10 items-start  ">
             {/* Form section */}
-            <div className="lg:col-span-2 my-8 z-40 text-start ">
-              <h2 className="text-2xl font-semibold mb-6">Comfirm & Reserve</h2>
+            <div className="lg:col-span-2 my-8 z-40 text-start">
+              <h2 className="text-2xl font-semibold mb-6">Confirm & Reserve</h2>
               <form
                 className="space-y-6"
                 onSubmit={(e) => {
                   e.preventDefault();
                   setShowModal(true);
                 }}
-              ></form>
-              <div>
-                <label className="block text-sm font-semibold text-gray-600 my-4">
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  className="w-full p-3 rounded-md bg-[#e8fafa] outline-nonen "
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-600 my-4">
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  className="w-full p-3 rounded-md bg-[#e8fafa] outline-nonen "
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-600 my-4">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full p-3 rounded-md bg-[#e8fafa] outline-nonen "
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-600 my-4">
-                  Phone Number
-                </label>
-                <input
-                  type="number"
-                  placeholder="Number"
-                  className="w-full p-3 rounded-md bg-[#e8fafa] outline-nonen "
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-[#1cb6be] text-white px-6 py-3 rounded-full font-medium mt-8 hover:bg-[#16a3aa] transition duration-300"
               >
-                <i className="ri-bookmark-line mr-2"></i> Confirm and Reserve
-              </button>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-600 my-4">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    className="w-full p-3 rounded-md bg-[#e8fafa] outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-600 my-4">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    className="w-full p-3 rounded-md bg-[#e8fafa] outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-600 my-4">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full p-3 rounded-md bg-[#e8fafa] outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-600 my-4">
+                    Phone Number
+                  </label>
+                  <input
+                    type="number"
+                    placeholder="Number"
+                    className="w-full p-3 rounded-md bg-[#e8fafa] outline-none"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="bg-[#1cb6be] text-white px-6 py-3 rounded-full font-medium mt-8 hover:bg-[#16a3aa] transition duration-300"
+                >
+                  <i className="ri-bookmark-line mr-2"></i> Confirm and Reserve
+                </button>
+              </form>
             </div>
 
             {/* Booking Summary */}
@@ -136,7 +141,9 @@ function Checkout() {
                   <i className="ri-user-line"></i>Max Adult: {room.adults}
                 </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mt-3">{room.title}</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mt-3">
+                {room.title}
+              </h3>
 
               {/* <div className="mt-4 space-y-3 text-sm text-gray-600 border-t border-gray-200 pt-4">
                 <p className="flex justify-between"><span></span></p>
@@ -145,6 +152,34 @@ function Checkout() {
           </div>
         </div>
       </div>
+
+      {/* Show Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-[9999]">
+          <div className="bg-white rounded-2xl p-8 w-[90%] max-w-md shadow-lg text-center relative">
+            <h2 className="text-3xl font-bold text-[#1cb6be] mb-4 ">
+              Booking Confirmed
+            </h2>
+            <p className="text-gray-600">
+              Thank you for your reservation. <br />A confirmation Mail has been
+              sent to you.
+            </p>
+
+            <button
+              className="mt-6 bg-[#1cb6be] hover:bg-[#16a3aa] text-white px-6 py-2 rounded-full  "
+              onClick={() => setShowModal(false)}
+            >
+              Close
+            </button>
+            <button
+              className="absolute top-3 right-4 text-gray-600 fover:text-black text-2xl  "
+              onClick={() => setShowModal(false)}
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

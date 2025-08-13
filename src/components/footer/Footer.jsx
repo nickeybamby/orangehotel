@@ -132,21 +132,27 @@ function Footer() {
           <div className="flex pt-[120px] flex-col lg:flex-row lg:justify-between gap-10  ">
             <div className="lg:w-7/12">
               <div className="flex items-center gap-3">
-                <img
-                  src={socialIcon1}
-                  alt=""
-                  className="bg-[#ffa600] p-2 rounded-full hover:bg-[#00c3ff] transition duration-300"
-                />
-                <img
-                  src={socialIcon2}
-                  alt=""
-                  className="bg-[#ffa600] p-2 rounded-full hover:bg-[#00c3ff] transition duration-300 "
-                />
-                <img
-                  src={socialIcon4}
-                  alt=""
-                  className="bg-[#ffa600] p-2 rounded-full hover:bg-[#00c3ff] transition duration-300 "
-                />
+                <a href="#">
+                  <img
+                    src={socialIcon1}
+                    alt=""
+                    className="bg-[#ffa600] p-2 rounded-full hover:bg-[#00c3ff] transition duration-300"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src={socialIcon2}
+                    alt=""
+                    className="bg-[#ffa600] p-2 rounded-full hover:bg-[#00c3ff] transition duration-300 "
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src={socialIcon4}
+                    alt=""
+                    className="bg-[#ffa600] p-2 rounded-full hover:bg-[#00c3ff] transition duration-300 "
+                  />
+                </a>
               </div>
               <p className="mt-5 font-light tracking-wide text-gray-700">
                 {" "}
