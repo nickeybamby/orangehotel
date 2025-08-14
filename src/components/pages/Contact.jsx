@@ -21,10 +21,10 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID", // 🔹 Replace
-        "YOUR_TEMPLATE_ID", // 🔹 Replace
+        "service_12upr71",
+        "template_gg3oslj", 
         formRef.current,
-        "YOUR_PUBLIC_KEY" // 🔹 Replace
+        "611w4BpD0gt_glodu" 
       )
       .then(
         () => {
@@ -44,17 +44,41 @@ function Contact() {
     <>
       {/* Banner Section */}
       <div className="section-banner mt-5 pt-6 relative flex items-center justify-center flex-col text-center z-[55]">
-        <img src={sectionElement} alt="" className="absolute w-full h-full" />
-        <img src={Element1} alt="" className="absolute w-full h-full" />
-        <img src={Element2} alt="" className="absolute w-full h-full" />
-        <img src={Element3} alt="" className="absolute w-full h-full" />
-        <div className="section-banner-content flex flex-col text-center z-[55]">
-          <h1 className="text-7xl font-semibold">Get In Touch</h1>
+        {" "}
+        <img
+          src={sectionElement}
+          alt=""
+          className="w-full h-full section-banner-element-1 absolute"
+        />{" "}
+        <img
+          src={sectionElement}
+          alt=""
+          className="w-full h-full section-banner-element-2 absolute"
+        />{" "}
+        <img
+          src={Element1}
+          alt=""
+          className="w-full h-full section-banner-element-3 absolute"
+        />{" "}
+        <img
+          src={Element2}
+          alt=""
+          className="w-full h-full section-banner-element-4 absolute"
+        />{" "}
+        <img
+          src={Element3}
+          alt=""
+          className="w-full h-full section-banner-element-5 absolute"
+        />{" "}
+        <div className="section-banner-content flex items-center flex-col text-center z-[55]">
+          {" "}
+          <h1 className="text-7xl font-semibold">Get In Touch</h1>{" "}
           <div className="mt-10 bg-[#d5f1f1] w-[350px] p-2 text-xl rounded">
-            <Link to={"/"}>Home</Link> &nbsp; / &nbsp;
-            <span className="text-gray-500">Contact Us</span>
-          </div>
-        </div>
+            {" "}
+            <Link to={"/"}>Home</Link> &nbsp; / &nbsp;{" "}
+            <span className="text-gray-500">Contact Us</span>{" "}
+          </div>{" "}
+        </div>{" "}
       </div>
 
       {/* Contact Form */}
@@ -64,15 +88,15 @@ function Contact() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <input
                 type="text"
-                name="first_name"
-                placeholder="Enter Your First Name"
+                name="name"
+                placeholder="Enter Your Full Name"
                 required
                 className="bg-[#fdfaf0] border border-[#eae0d0] rounded-lg px-4 py-3 outline-none"
               />
               <input
-                type="text"
-                name="last_name"
-                placeholder="Enter Your Last Name"
+                type="number"
+                name="phone"
+                placeholder="Enter Your Phone Number"
                 required
                 className="bg-[#fdfaf0] border border-[#eae0d0] rounded-lg px-4 py-3 outline-none"
               />
@@ -88,8 +112,8 @@ function Contact() {
               />
               <input
                 type="text"
-                name="phone"
-                placeholder="Enter Your Phone Number"
+                name="subject"
+                placeholder="Subject"
                 required
                 className="bg-[#fdfaf0] border border-[#eae0d0] rounded-lg px-4 py-3 outline-none"
               />
@@ -100,7 +124,7 @@ function Contact() {
               name="message"
               placeholder="Your Message..."
               required
-              className="bg-[#fdfaf0] border border-[#eae0d0] rounded-lg px-4 py-3 outline-none resize-none"
+              className="w-full bg-[#fdfaf0] border border-[#eae0d0] rounded-lg px-4 py-3 resize-none outline-none text-[#1d2b3a] placeholder:text-[#1b2d3a]/60 focus-within:ring-2 focus-within:ring-[#d1a410] transition-all duration-300"
             ></textarea>
 
             <div className="flex flex-col md:flex-row justify-between items-center">
@@ -143,10 +167,10 @@ function Contact() {
             <p>We invite you to visit.</p>
           </div>
         </div>
-      </section>
-        <div className="rounded-[20px] overflow-hidden mt-20">
+        <div className="rounded-[20px] overflow-hidden shadow-xl mt-20">
           <Map />
         </div>
+      </section>
     </>
   );
 }
