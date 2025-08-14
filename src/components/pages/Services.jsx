@@ -127,10 +127,10 @@ function Services() {
             in one place.
           </p>
 
-          <button className="w-[200px] tracking-[2px] h-[60px] bg-[#ecb934] transition hover:bg-orange-600 rounded-full text-white uppercase  ">
+          {/* <button className="w-[200px] tracking-[2px] h-[60px] bg-[#ecb934] transition hover:bg-orange-600 rounded-full text-white uppercase  ">
             {" "}
             <Link to="./services"> Read More</Link>
-          </button>
+          </button> */}
         </div>
       </div>
 

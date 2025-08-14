@@ -231,10 +231,10 @@ function Index() {
             in one place.
           </p>
 
-          <button className="w-[200px] tracking-[2px] h-[60px] bg-[#ecb934] transition hover:bg-orange-600 rounded-full text-white uppercase  ">
+          <Link to="./services"><button className="w-[200px] tracking-[2px] h-[60px] bg-[#ecb934] transition hover:bg-orange-600 rounded-full text-white uppercase  ">
             {" "}
-            <Link to="./services"> Read More</Link>
-          </button>
+             Read More
+          </button></Link>
         </div>
       </div>
 
