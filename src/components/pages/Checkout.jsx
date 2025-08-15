@@ -35,7 +35,7 @@ function Checkout() {
     e.preventDefault();
 
     // WhatsApp number (include country code, no + sign, e.g. 234XXXXXXXXXX for Nigeria)
-    const hotelWhatsApp = "2349031132778";
+    const hotelWhatsApp = "2349132017988";
 
     const message = `Hello, I would like to confirm my booking:
 - Name: ${firstName} ${lastName}
