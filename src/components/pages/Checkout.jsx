@@ -24,34 +24,44 @@ function Checkout() {
   }
 
   const [showModal, setShowModal] = useState(false);
+
+  // Form state
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // WhatsApp number (include country code, no + sign, e.g. 234XXXXXXXXXX for Nigeria)
+    const hotelWhatsApp = "2349031132778";
+
+    const message = `Hello, I would like to confirm my booking:
+- Name: ${firstName} ${lastName}
+- Email: ${email}
+- Phone: ${phone}
+- Room: ${room.title}
+- Max Adults: ${room.adults}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${hotelWhatsApp}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, "_blank"); // Open WhatsApp in new tab
+
+    setShowModal(true);
+  };
+
   return (
     <>
       <div className="section-banner booking-banner mt-5 pt-6 relative flex items-center justify-center flex-col text-center z-[55]">
-        <img
-          src={sectionElement}
-          alt=""
-          className="w-full h-full section-banner-element-1 absolute"
-        />
-        <img
-          src={sectionElement}
-          alt=""
-          className="w-full h-full section-banner-element-2 absolute"
-        />
-        <img
-          src={Element1}
-          alt=""
-          className="w-full h-full section-banner-element-3 absolute"
-        />
-        <img
-          src={Element2}
-          alt=""
-          className="w-full h-full section-banner-element-4 absolute"
-        />
-        <img
-          src={Element3}
-          alt=""
-          className="w-full h-full section-banner-element-5 absolute"
-        />
+        {/* banner images */}
+        <img src={sectionElement} alt="" className="w-full h-full section-banner-element-1 absolute" />
+        <img src={sectionElement} alt="" className="w-full h-full section-banner-element-2 absolute" />
+        <img src={Element1} alt="" className="w-full h-full section-banner-element-3 absolute" />
+        <img src={Element2} alt="" className="w-full h-full section-banner-element-4 absolute" />
+        <img src={Element3} alt="" className="w-full h-full section-banner-element-5 absolute" />
+
         <div className="section-banner-content flex items-center flex-col text-center z-[55]">
           <h1 className="text-7xl font-semibold">
             Booking <br />
@@ -69,54 +79,52 @@ function Checkout() {
             {/* Form section */}
             <div className="lg:col-span-2 my-8 z-40 text-start">
               <h2 className="text-2xl font-semibold mb-6">Confirm & Reserve</h2>
-              <form
-                className="space-y-6"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setShowModal(true);
-                }}
-              >
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-600 my-4">
-                    First Name
-                  </label>
+                  <label className="block text-sm font-semibold text-gray-600 my-4">First Name</label>
                   <input
                     type="text"
                     placeholder="First Name"
                     className="w-full p-3 rounded-md bg-[#e8fafa] outline-none"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-600 my-4">
-                    Last Name
-                  </label>
+                  <label className="block text-sm font-semibold text-gray-600 my-4">Last Name</label>
                   <input
                     type="text"
                     placeholder="Last Name"
                     className="w-full p-3 rounded-md bg-[#e8fafa] outline-none"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-600 my-4">
-                    Email Address
-                  </label>
+                  <label className="block text-sm font-semibold text-gray-600 my-4">Email Address</label>
                   <input
                     type="email"
                     placeholder="Your Email"
                     className="w-full p-3 rounded-md bg-[#e8fafa] outline-none"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-600 my-4">
-                    Phone Number
-                  </label>
+                  <label className="block text-sm font-semibold text-gray-600 my-4">Phone Number</label>
                   <input
                     type="number"
                     placeholder="Number"
                     className="w-full p-3 rounded-md bg-[#e8fafa] outline-none"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -141,13 +149,7 @@ function Checkout() {
                   <i className="ri-user-line"></i>Max Adult: {room.adults}
                 </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mt-3">
-                {room.title}
-              </h3>
-
-              {/* <div className="mt-4 space-y-3 text-sm text-gray-600 border-t border-gray-200 pt-4">
-                <p className="flex justify-between"><span></span></p>
-              </div> */}
+              <h3 className="text-lg font-semibold text-gray-800 mt-3">{room.title}</h3>
             </div>
           </div>
         </div>
@@ -157,12 +159,9 @@ function Checkout() {
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-[9999]">
           <div className="bg-white rounded-2xl p-8 w-[90%] max-w-md shadow-lg text-center relative">
-            <h2 className="text-3xl font-bold text-[#1cb6be] mb-4 ">
-              Booking Confirmed
-            </h2>
+            <h2 className="text-3xl font-bold text-[#1cb6be] mb-4 ">Booking Confirmed</h2>
             <p className="text-gray-600">
-              Thank you for your reservation. <br />A confirmation Mail has been
-              sent to you.
+              Thank you for your reservation. <br /> A WhatsApp message has been opened for confirmation.
             </p>
 
             <button
