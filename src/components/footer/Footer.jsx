@@ -157,7 +157,7 @@ function Footer() {
               <p className="mt-5 font-light tracking-wide text-gray-700">
                 {" "}
                 {new Date().getFullYear()}. Orange Inn &copy; All rights
-                reserved. | By
+                reserved. | Built with &hearts; by
                 <a
                   href="https://www.clinicraftstudios.xyz"
                   target="blank"

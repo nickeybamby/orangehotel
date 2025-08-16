@@ -39,6 +39,7 @@ function Nav() {
           <li>
             <Link
               to="/"
+              onClick={() => setIsOpen(false)}
               className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Home
@@ -47,6 +48,7 @@ function Nav() {
           <li>
             <Link
               to="/about"
+              onClick={() => setIsOpen(false)}
               className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               About
@@ -55,6 +57,7 @@ function Nav() {
           <li>
             <Link
               to="/services"
+              onClick={() => setIsOpen(false)}
               className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Services
@@ -63,6 +66,7 @@ function Nav() {
           <li>
             <Link
               to="/room"
+              onClick={() => setIsOpen(false)}
               className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Rooms
@@ -71,6 +75,7 @@ function Nav() {
           <li>
             <Link
               to="/blog"
+              onClick={() => setIsOpen(false)}
               className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Blog
@@ -79,6 +84,7 @@ function Nav() {
           <li>
             <Link
               to="/gallery"
+              onClick={() => setIsOpen(false)}
               className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Gallery
@@ -87,6 +93,7 @@ function Nav() {
           <li>
             <Link
               to="/contact"
+              onClick={() => setIsOpen(false)}
               className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Contact
@@ -96,9 +103,10 @@ function Nav() {
 
         {/* RIGHT SIDE BUTTON */}
         <div className="flex items-center gap-3">
+          <Link to={'/room'}>
           <button
-            onClick={() => setIsModalOpen(true)}
-            className="btn custom-btn bg-[#ecb934] hover:bg-orange-600 transition duration-300 flex items-center lg:py-4 lg:px-10 py-4 px-4 rounded-full gap-3 text-white uppercase tracking-widest"
+            // onClick={() => setIsModalOpen(true)}
+            className="btn custom-btn bg-[#ffa600] hover:bg-[#ecb934] transition duration-300 flex items-center lg:py-4 lg:px-10 py-4 px-4 rounded-full gap-3 text-white uppercase tracking-widest"
           >
             <img
               src={bookmark}
@@ -106,7 +114,7 @@ function Nav() {
               className="invert brightness-0 w-4 h-4"
             />
             <span className="hidden xl:block">Book Now</span>
-          </button>
+          </button></Link>
 
           {/* MOBILE MENU TOGGLE */}
           <div className="lg:hidden block">
@@ -126,7 +134,7 @@ function Nav() {
         </div>
 
         {/* MODAL FORM */}
-        {isModalOpen && (
+        {/* {isModalOpen && (
           <div className="fixed nav-form inset-0 z-[999] flex items-center justify-center bg-[rgba(32,79,94,.9)]">
             <div className="bg-white w-full max-w-[500px] p-[40px] rounded-[15px] shadow-lg relative">
               <button
@@ -152,7 +160,7 @@ function Nav() {
                     className="w-full p-3 h-[60px] bg-[#eafbfb] rounded border outline-none"
                     dateFormat="dd/MM/yyyy"
                   ></DatePicker>
-                  {/* <i className="ri-calendar-line "></i> */}
+                  <i className="ri-calendar-line "></i>
                   </div>
                 </div>
 
@@ -168,7 +176,7 @@ function Nav() {
                     className="w-full p-3 h-[60px] bg-[#eafbfb] outline-none"
                     dateFormat="dd/MM/yyyy"
                   ></DatePicker>
-                  {/* <i className="ri-calendar-line"></i> */}
+                  <i className="ri-calendar-line"></i>
                 </div>
 
                 <div className="mb-10 relative">
@@ -182,7 +190,7 @@ function Nav() {
                     min="1"
                     className="w-full p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none"
                   />
-                  {/* <i className="ri-calendar-line"></i> */}
+                  <i className="ri-calendar-line"></i>
                 </div>
 
                 <button
@@ -194,7 +202,7 @@ function Nav() {
               </form>
             </div>
           </div>
-        )}
+        )} */}
       </nav>
     </>
   );

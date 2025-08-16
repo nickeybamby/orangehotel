@@ -23,12 +23,10 @@ import RoomsData from "../../Rooms.json";
 
 import heroImg from "../../assets/about.png";
 
-import avatar1 from "../../assets/review-1.jpg";
-import avatar2 from "../../assets/review-2.jpg";
-import avatar3 from "../../assets/review-3.jpg";
-import avatar4 from "../../assets/review-4.jpg";
-import avatar5 from "../../assets/review-5.jpg";
-import avatar6 from "../../assets/review-6.jpg";
+import avatar1 from "../../assets/review-1.jpeg";
+import avatar2 from "../../assets/review-1.jpeg";
+import avatar3 from "../../assets/review-1.jpeg";
+import avatar4 from "../../assets/review-1.jpeg";
 
 import blog1 from "../../assets/blog-2.jpg";
 import blog2 from "../../assets/blog-3.jpg";
@@ -62,27 +60,27 @@ function Index() {
   const testimonials = [
     {
       name: "Sarah Ojo",
-      company: "Obaga Orange",
+      company: "",
       message:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur saepe repellat esse nostrum repudiandae eaque consequatur, impedit eveniet porro reiciendis? Error labore vitae consequuntur dolorum est qui id, quos sunt molestiae deleniti nesciunt, placeat omnis accusamus facere, magni quibusdam odio.",
+        "Lovely atmosphere, but Wi-Fi could be faster.",
     },
     {
       name: "Kunle Usmaan",
-      company: "Xcel Groups",
+      company: "",
       message:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur saepe repellat esse nostrum repudiandae eaque consequatur, impedit eveniet porro reiciendis? Error labore vitae consequuntur dolorum est qui id, quos sunt molestiae deleniti nesciunt, placeat omnis accusamus facere, magni quibusdam odio.",
+        "Room was spotless, bed was super comfy. Will be back!",
     },
     {
       name: "Adio Ronke",
-      company: "ThemeForest",
+      company: "O2 Fashion",
       message:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur saepe repellat esse nostrum repudiandae eaque consequatur, impedit eveniet porro reiciendis? Error labore vitae consequuntur dolorum est qui id, quos sunt molestiae deleniti nesciunt, placeat omnis accusamus facere, magni quibusdam odio.",
+        "Great location, great meal, and amazing service.",
     },
     {
       name: "Okon Miracle",
-      company: "CodeCrayon",
+      company: "CC",
       message:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur saepe repellat esse nostrum repudiandae eaque consequatur, impedit eveniet porro reiciendis? Error labore vitae consequuntur dolorum est qui id, quos sunt molestiae deleniti nesciunt, placeat omnis accusamus facere, magni quibusdam odio.",
+        "Clean, calm, and comfortable",
     },
   ];
 
@@ -587,7 +585,7 @@ function Index() {
               Customer Voices : <br /> Hear What They Say!
             </h1>
 
-            <div className="flex h-[100px] items-center justify-center space-x-4 mb-6">
+            {/* <div className="flex h-[100px] items-center justify-center space-x-4 mb-6">
               {avatars.map((avatar, index) => (
                 <img
                   key={index}
@@ -602,7 +600,7 @@ function Index() {
                   }}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
 
           <div className="max-w-4xl mx-auto relative">
@@ -656,6 +654,7 @@ function Index() {
         </div>
       </div>
 
+              {/* Our blog */}
       <div className=" bg-[#fffaf0] lg:px-[6%] px-[8%] py-[150px] flex flex-col items-center justify-center gap-10 z-[9] relative overflow-hidden pt-[20px] ">
         <span className="bg-[#d5f1f1] rounded-full px-5 py-2 font-bricolage tracking-wider text-sm uppercase">
           Our Blogs

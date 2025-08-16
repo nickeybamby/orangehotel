@@ -161,9 +161,9 @@ function About() {
                 simply be.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-                <button className="bg-[#ffa600] hover:bg-[#ecb934] text-white font-semibold px-6 py-3 rounded-full transition flex items-center gap-2">
+                {/* <button className="bg-[#ffa600] hover:bg-[#ecb934] text-white font-semibold px-6 py-3 rounded-full transition flex items-center gap-2">
                   <i className="ri-mail-line"></i>READ MORE
-                </button>
+                </button> */}
                 <Link
                   to={"/room"}
                   className="font-semibold text-[#1d2b3a] inline-flex items-center group "
