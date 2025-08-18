@@ -7,7 +7,7 @@ import Element1 from "../../assets/element-1.png";
 import Element2 from "../../assets/element-2.png";
 import Element3 from "../../assets/element-3.png";
 
-import { FaWind, FaWifi, FaTv, FaShower } from "react-icons/fa";
+import { FaWind, FaWifi, FaTv, FaShower, FaBreadSlice, FaCoffee } from "react-icons/fa";
 import { IoLogoNoSmoking } from "react-icons/io5";
 import { MdOutlinePets } from "react-icons/md";
 
@@ -121,6 +121,16 @@ function RoomsDetails() {
                   <FaWifi className="w-[50px] h-[50px] p-3 bg-[#f7e1ab] rounded-md text-[#ffa600]" />
                   <p className="font-semibold text-gray-600 text-xl">
                     Free Wi-fi
+                  </p>
+                </div>
+                
+                <div
+                  className="flex items-center gap-3
+                         bg-white rounded-xl shadow-md p-4"
+                >
+                  <FaCoffee className="w-[50px] h-[50px] p-3 bg-[#f7e1ab] rounded-md text-[#ffa600]" />
+                  <p className="font-semibold text-gray-600 text-xl">
+                    Complimentary Breakfast
                   </p>
                 </div>
 
